@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Application</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h1>Dynamic Quiz Application</h1>
+
+  <!-- CATEGORY PAGE -->
+  <div id="category-selection">
+    <h2>Select a Topic</h2>
+    <button class="category-btn" data-category="9" data-name="General Knowledge">General Knowledge</button>
+    <button class="category-btn" data-category="18" data-name="Computers">Computers</button>
+    <button class="category-btn" data-category="17" data-name="Science">Science</button>
+    <button class="category-btn" data-category="23" data-name="History">History</button>
+    <button class="category-btn" data-category="22" data-name="Geography">Geography</button>
+
+    <br><br>
+    <button id="view-graph-btn">📊 View Graph</button>
+  </div>
+
+  <!-- GRAPH PAGE -->
+  <div id="graph-container" style="display:none;">
+    <h2>Quiz Performance Graph</h2>
+    <canvas id="attemptChart"></canvas>
+    <br>
+    <button id="back-from-graph">⬅ Back</button>
+  </div>
+
+  <!-- QUIZ PAGE -->
+  <div id="quiz" style="display:none;">
+    <h3 id="category-name"></h3>
+
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div id="question"></div>
+    <ul id="options"></ul>
+
+    <div id="timer">Time: 15s</div>
+    <button id="next-btn">Next</button>
+
+    <div id="result"></div>
+
+    <!-- END BUTTONS -->
+    <div id="end-buttons" style="display:none;">
+      <button id="restart-btn">Restart Quiz</button>
+      <button id="back-btn">Back to Categories</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
